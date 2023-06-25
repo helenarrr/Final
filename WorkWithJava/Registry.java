@@ -20,7 +20,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 String command = cats.animalCommand(sc.nextLine());
-                WriteInfo.writeInfo(cats, command);
+                WriteInfo.writeBasicInfo(cats, command);
             }
             if (flag == 2) {
                 System.out.println("Введите имя животного: ");
@@ -28,7 +28,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 String command = dogs.animalCommand(sc.nextLine());
-                WriteInfo.writeInfo(dogs, command);
+                WriteInfo.writeBasicInfo(dogs, command);
 
             }
             if (flag == 3) {
@@ -37,7 +37,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 String command = hamsters.animalCommand(sc.nextLine());
-                WriteInfo.writeInfo(hamsters, command);
+                WriteInfo.writeBasicInfo(hamsters, command);
             }
         } else if (flag == 2) {
             System.out.println("1-Лошадь, 2-Осел, 3-Верблюд");
@@ -48,7 +48,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 String command = horses.animalCommand(sc.nextLine());
-                WriteInfo.writeInfo(horses, command);
+                WriteInfo.writeBasicInfo(horses, command);
             }
             if (flag == 2) {
                 System.out.println("Введите имя животного: ");
@@ -56,7 +56,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 String command = donkeys.animalCommand(sc.nextLine());
-                WriteInfo.writeInfo(donkeys, command);
+                WriteInfo.writeBasicInfo(donkeys, command);
 
             }
             if (flag == 3) {
@@ -65,7 +65,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 String command = camels.animalCommand(sc.nextLine());
-                WriteInfo.writeInfo(camels, command);
+                WriteInfo.writeBasicInfo(camels, command);
 
             }
         }
