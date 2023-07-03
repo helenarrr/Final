@@ -1,10 +1,10 @@
 package WorkWithJava.MVP;
 
-import WorkWithJava.ReadInfo;
+import WorkWithJava.WorkWithFiles.ExtraFunctional;
+import WorkWithJava.WorkWithFiles.ReadInfo;
 import WorkWithJava.Registry;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Model {
 
@@ -13,14 +13,13 @@ public class Model {
 
     public void workWithRegistry() throws IOException {
 
+        ExtraFunctional extraFunctional = new ExtraFunctional();
         int choice = view.menu();
         switch (choice) {
             case 1 -> registry.addNewAnimal();
-            case 2 -> ReadInfo.readInfo();
-
-//          case 3 -> ;
+            case 2 -> ReadInfo.readCommands();
+            case 3 ->  extraFunctional.addCommand();
             case 4 -> System.out.println("До свидания!");
-//
         }
     }
 }

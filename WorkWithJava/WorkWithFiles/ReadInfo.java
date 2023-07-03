@@ -1,18 +1,21 @@
-package WorkWithJava;
+package WorkWithJava.WorkWithFiles;
+
+import WorkWithJava.ClassesAnimals.Animal;
+import WorkWithJava.ICommands;
 
 import java.io.*;
 import java.util.Scanner;
 
 public class ReadInfo {
 
-    public static void readInfo() throws IOException {
+
+    public static void readCommands() throws IOException {
 
         File file = new File("Animals.txt");
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введите имя животного, чтобы посмотреть, что он умеет : ");
         String name = sc.next();
-        sc.nextLine();
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String line;

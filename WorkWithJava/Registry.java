@@ -1,6 +1,7 @@
 package WorkWithJava;
 
 import WorkWithJava.ClassesAnimals.*;
+import WorkWithJava.WorkWithFiles.WriteInfo;
 
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class Registry {
     Scanner sc = new Scanner(System.in);
 
     public void addNewAnimal() {
+        String command;
         System.out.println("Какое животное вы хотите завести в базу?");
         System.out.println("1-Домашнее, 2-Вьючнное, введите в консоль цифру: ");
         int flag = sc.nextInt();
@@ -19,16 +21,16 @@ public class Registry {
                 Cats cats = new Cats(sc.next());
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
-                String command = cats.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo(cats, command);
+                command = cats.animalCommand(sc.nextLine());
+                WriteInfo.writeBasicInfo("Кошка: ", cats, command);
             }
             if (flag == 2) {
                 System.out.println("Введите имя животного: ");
                 Dogs dogs = new Dogs(sc.next());
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
-                String command = dogs.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo(dogs, command);
+                command = dogs.animalCommand(sc.nextLine());
+                WriteInfo.writeBasicInfo("Собака: ", dogs, command);
 
             }
             if (flag == 3) {
@@ -36,8 +38,8 @@ public class Registry {
                 Hamsters hamsters = new Hamsters(sc.next());
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
-                String command = hamsters.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo(hamsters, command);
+                command = hamsters.animalCommand(sc.nextLine());
+                WriteInfo.writeBasicInfo("Хомяк: ", hamsters, command);
             }
         } else if (flag == 2) {
             System.out.println("1-Лошадь, 2-Осел, 3-Верблюд");
@@ -47,16 +49,16 @@ public class Registry {
                 Horses horses = new Horses(sc.next());
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
-                String command = horses.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo(horses, command);
+                command = horses.animalCommand(sc.nextLine());
+                WriteInfo.writeBasicInfo("Лошадь: ", horses, command);
             }
             if (flag == 2) {
                 System.out.println("Введите имя животного: ");
                 Donkeys donkeys = new Donkeys(sc.next());
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
-                String command = donkeys.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo(donkeys, command);
+                command = donkeys.animalCommand(sc.nextLine());
+                WriteInfo.writeBasicInfo("Осел: ", donkeys, command);
 
             }
             if (flag == 3) {
@@ -64,8 +66,8 @@ public class Registry {
                 Camels camels = new Camels(sc.next());
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
-                String command = camels.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo(camels, command);
+                command = camels.animalCommand(sc.nextLine());
+                WriteInfo.writeBasicInfo("Верблюд: ",camels, command);
 
             }
         }
