@@ -2,13 +2,23 @@ package WorkWithJava;
 
 import WorkWithJava.ClassesAnimals.*;
 import WorkWithJava.WorkWithFiles.WriteInfo;
-
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Registry {
     Scanner sc = new Scanner(System.in);
-
-    public void addNewAnimal() {
+    public void countAddAnimal() {
+        try (Counter counter = new Counter()) {
+            addNewAnimal();
+            counter.add();
+            Counter.flag = true;
+        } catch (NoSuchElementException e) {
+            System.out.println("Ошибка ввода данных");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    private void addNewAnimal() {
         String command;
         System.out.println("Какое животное вы хотите завести в базу?");
         System.out.println("1-Домашнее, 2-Вьючнное, введите в консоль цифру: ");
@@ -31,7 +41,6 @@ public class Registry {
                 System.out.println("Что умеет животное? Введите команду: ");
                 command = dogs.animalCommand(sc.nextLine());
                 WriteInfo.writeBasicInfo("Собака: ", dogs, command);
-
             }
             if (flag == 3) {
                 System.out.println("Введите имя животного: ");
@@ -67,7 +76,7 @@ public class Registry {
                 sc.nextLine();
                 System.out.println("Что умеет животное? Введите команду: ");
                 command = camels.animalCommand(sc.nextLine());
-                WriteInfo.writeBasicInfo("Верблюд: ",camels, command);
+                WriteInfo.writeBasicInfo("Верблюд: ", camels, command);
 
             }
         }

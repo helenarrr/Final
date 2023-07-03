@@ -16,7 +16,7 @@ public class Model {
         ExtraFunctional extraFunctional = new ExtraFunctional();
         int choice = view.menu();
         switch (choice) {
-            case 1 -> registry.addNewAnimal();
+            case 1 -> registry.countAddAnimal();
             case 2 -> ReadInfo.readCommands();
             case 3 ->  extraFunctional.addCommand();
             case 4 -> System.out.println("До свидания!");

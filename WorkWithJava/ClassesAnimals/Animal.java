@@ -1,9 +1,5 @@
 package WorkWithJava.ClassesAnimals;
 
-import WorkWithJava.ICommands;
-
-import java.util.Scanner;
-
 
 public class Animal implements ICommands {
     private final String name;

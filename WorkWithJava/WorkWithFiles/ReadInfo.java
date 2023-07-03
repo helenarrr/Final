@@ -1,8 +1,5 @@
 package WorkWithJava.WorkWithFiles;
 
-import WorkWithJava.ClassesAnimals.Animal;
-import WorkWithJava.ICommands;
-
 import java.io.*;
 import java.util.Scanner;
 
